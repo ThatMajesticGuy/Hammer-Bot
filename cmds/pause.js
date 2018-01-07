@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const yt = require('ytdl-core');
 const YouTube = require('simple-youtube-api');
-const youtube = new YouTube("AIzaSyBPEs8lNQ2OLmA3g1ezw3QkCEF0oHkJz0k");
+const youtube = new YouTube(process.env.YOUTUBE_API_KEY);
 
 exports.run = async(bot, message, args, queue) => {
   const prefix = prefixes[message.guild.id].prefix;
@@ -10,6 +10,12 @@ exports.run = async(bot, message, args, queue) => {
     const searchString = args1.slice(1).join(' ');
     const url = args1[1] ? args1[1].replace(/<(.+)>/g, '$1') : '';
     const serverQueue = queue.get(message.guild.id);
+  
+      const voiceChannel = message.member.voiceChannel
+
+  if (message.channel.id !== "399548148315586580") return message.channel.send(":musical_note: :x: ***__You need to be in <#399548148315586580> To use this command!__*** :x: :musical_note:")
+  if (message.member.voiceChannelID !== "399540529995710484" && !message.member.voiceChannelID) return message.channel.send(":musical_note: :x:***__You Must be in the music room to use this Command!__*** :x: :musical_note:")
+  
 
   if (serverQueue && serverQueue.playing) {
         serverQueue.playing = false;
