@@ -10,10 +10,10 @@ exports.run = async(bot, message, args, queue) => {
   const searchString = args1.slice(1).join(' ');
   const url = args1[1] ? args1[1].replace(/<(.+)>/g, '$1') : '';
   const serverQueue = queue.get(message.guild.id);
-  const voiceChannel = message.member.voiceChannelID
+    const voiceChannel = message.member.voiceChannelID
 
-        if (message.channel.id !== "304339778021752833") return message.channel.send(":musical_note: :x: ***__You need to be in <#304339778021752833> To use this command!__*** :x: :musical_note:")
-      if (voiceChannel !== "304339570047188992" && !voiceChannel) return message.channel.send(":musical_note: :x:***__You Must be in the music room to use this Command!__*** :x: :musical_note:")
+  if (message.channel.id !== "399548148315586580") return message.channel.send(":musical_note: :x: ***__You need to be in <#399548148315586580> To use this command!__*** :x: :musical_note:")
+  if (voiceChannel !== "399540529995710484" && !voiceChannel) return message.channel.send(":musical_note: :x:***__You Must be in the music room to use this Command!__*** :x: :musical_note:")
      
 
     if (serverQueue && !serverQueue.playing) {
