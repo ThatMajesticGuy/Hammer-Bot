@@ -14,7 +14,7 @@ exports.run = async(bot, message, args, queue) => {
 
 
       if (message.channel.id !== "304339778021752833") return message.channel.send(":musical_note: :x: ***__You need to be in <#304339778021752833> To use this command!__*** :x: :musical_note:")
-      if (message.member.voiceChannel.id !== "304339570047188992" && !message.member.voiceChannel) return message.channel.send(":musical_note: :x:***__You Must be in the music room to use this Command!__*** :x: :musical_note:")
+      if (message.member.voiceChannelID !== "304339570047188992" && !message.member.voiceChannelID) return message.channel.send(":musical_note: :x:***__You Must be in the music room to use this Command!__*** :x: :musical_note:")
     if (!serverQueue) return message.channel.send('There is nothing playing! Add some music to play using: h!play [song-name]');
     return message.channel.send(`
 __**Song queue:**__
