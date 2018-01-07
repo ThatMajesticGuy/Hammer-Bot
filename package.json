@@ -16,6 +16,7 @@
     "ascii": "^1.0.0",
     "bluebird": "^3.5.0",
     "bugsnag": "^1.12.0",
+    "cat-facts": "1.0.2",
     "cheerio": "^1.0.0-rc.2",
     "chucknorris-io": "^1.0.5",
     "cleverbot-node": "^0.3.11",
