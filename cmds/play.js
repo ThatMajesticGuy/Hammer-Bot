@@ -10,10 +10,10 @@ const searchString = args1.slice(1).join(' ');
 const url = args1[1] ? args1[1].replace(/<(.+)>/g, '$1') : '';
 const serverQueue = queue.get(message.guild.id);
 
-    const voiceChannel = message.member.voiceChannel
+     const voiceChannel = message.member.voiceChannel
 
   if (message.channel.id !== "399548148315586580") return message.channel.send(":musical_note: :x: ***__You need to be in <#399548148315586580> To use this command!__*** :x: :musical_note:")
-  if (message.member.voiceChannelID !== "399540529995710484" && !message.member.voiceChannelID) return message.channel.send(":musical_note: :x:***__You Must be in the music room to use this Command!__*** :x: :musical_note:")
+  if (message.member.voiceChannelID !== "399540529995710484") return message.channel.send(":musical_note: :x:***__You Must be in the music room to use this Command!__*** :x: :musical_note:")
   
   const permissions = voiceChannel.permissionsFor(bot.user);
   if (!permissions.has('CONNECT')) {
