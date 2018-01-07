@@ -118,8 +118,8 @@ function play(guild, song) {
 const serverQueue = queue.get(guild.id);
 
 if (!song) {
-  serverQueue.voiceChannel.leave();
-  queue.delete(guild.id);
+  var songs = "https://www.youtube.com/watch?v=aZcB9maO1-E&index=1&list=PLwVvrpUdZsNIylnjveUWu_kD0rwHzqzUs"
+  serverQueue.songs.push(songs)
   return;
 }
 
