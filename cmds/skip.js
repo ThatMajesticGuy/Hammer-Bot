@@ -14,10 +14,10 @@ exports.run = async(bot, message, args, queue) => {
 
 // Time for the commands
 
-const voiceChannel = bot.channels.get("383362899529302017");
-if(!voiceChannel.members.has(message.author.id)) return message.channel.send("You need to be in the voice channel \"Random Music\" To play music");
-    if (!voiceChannel) return message.channel.send('Uh oh! Something went wrong! Contact mods!');
-    if (message.channel.id !== "383693299908608010") return message.channel.send("You need to be in <#383693299908608010> To use this command!")
+    const voiceChannel = message.member.voiceChannelID
+
+  if (message.channel.id !== "399548148315586580") return message.channel.send(":musical_note: :x: ***__You need to be in <#399548148315586580> To use this command!__*** :x: :musical_note:")
+  if (voiceChannel !== "399540529995710484" && !voiceChannel) return message.channel.send(":musical_note: :x:***__You Must be in the music room to use this Command!__*** :x: :musical_note:")
 		if (!serverQueue) return message.channel.send("I can't skip Nothing?");
       		serverQueue.connection.dispatcher.end('Skip command has been used!');
 		return undefined;
