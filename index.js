@@ -101,6 +101,7 @@ bot.on("guildMemberDelete", member => {
 
 
 
+
 process.on('unhandledRejection', error => {
     console.log(`Unhandled Error Found! \n ${error.stack}`)
 });
