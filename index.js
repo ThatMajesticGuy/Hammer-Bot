@@ -97,7 +97,6 @@ bot.on("guildMemberDelete", member => {
       .addField(`<:weep:317012456327348225> __${member.user.username}__ has left the server... <:weep:317012456327348225>`, "Lets hope we see them soon!")
       log.send({ embed: embed })
 });
-]
 
 
 process.on('unhandledRejection', error => {
