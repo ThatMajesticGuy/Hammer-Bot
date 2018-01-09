@@ -47,3 +47,5 @@ exports.help = {
     description: "Does it need one?",
     usage: "h!r34 <What-You-Want-To-See>"
 }
+
+exports.aliases = ["rule34", "porn"]
