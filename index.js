@@ -83,17 +83,13 @@ bot.on("guildMemberAdd", member => {
 log.send({ embed: embed })
 })
 
-bot.on("guildMemberDelete", member => {
-  console.log("wtf is wrong with this")
-  let avatar;
-  if (!member.user.avatarURL) avatar = member.guild.iconURL;
-  if (member.user.avatarURL) avatar = member.user.avatarURL;
+bot.on("guildMemberRemove", member => {
       const log = bot.channels.get("399228344719114251")
       var embed = new Discord.RichEmbed()
       .setTitle("Goodbye <:down:317008439316578314>")
       .setColor("BLUE")
       .setTimestamp()
-      .setThumbnail(avatar)
+      .setThumbnail(member.user.displayAvatarURL)
       .setAuthor("Hammer Kingdom", member.guild.iconURL)
       .addField(`<:weep:317012456327348225> __${member.user.username}__ has left the server... <:weep:317012456327348225>`, "Lets hope we see them soon!")
       log.send({ embed: embed })
