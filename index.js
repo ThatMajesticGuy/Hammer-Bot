@@ -75,7 +75,7 @@ bot.on("guildMemberAdd", member => {
   var embed = new Discord.RichEmbed()
   .setTitle("Welcome <:blobwave:399237241035030538>")
   .setColor("#2bc237")
-  .setTimestamp(`Joined on ${dateformat(Date.now(), "***mmmm dS, yyyy***, On a ***dddd***, ***h:MM:ss TT, Z***")}`)
+  .setTimestamp()
   .setThumbnail(avatar)
   .setAuthor("Hammer Kingdom", member.guild.iconURL)
   .addField(`:bust_in_silhouette: Ayyy its __${member.user.username}__! :bust_in_silhouette:`, ":wave: Welcome to the **__Hammer Kingdom!__** :wave:")
@@ -91,15 +91,13 @@ bot.on("guildMemberDelete", member => {
       var embed = new Discord.RichEmbed()
       .setTitle("Goodbye <:down:317008439316578314>")
       .setColor("BLUE")
-      .setTimestamp(`Left on ${dateformat(Date.now(), "***mmmm dS, yyyy***, On a ***dddd***, ***h:MM:ss TT, Z***")}`)
+      .setTimestamp()
       .setThumbnail(avatar)
       .setAuthor("Hammer Kingdom", member.guild.iconURL)
       .addField(`<:weep:317012456327348225> __${member.user.username}__ has left the server... <:weep:317012456327348225>`, "Lets hope we see them soon!")
       log.send({ embed: embed })
 });
-
-
-
+]
 
 
 process.on('unhandledRejection', error => {
