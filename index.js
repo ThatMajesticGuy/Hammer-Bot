@@ -84,6 +84,7 @@ log.send({ embed: embed })
 })
 
 bot.on("guildMemberDelete", member => {
+  console.log("wtf is wrong with this")
   let avatar;
   if (!member.user.avatarURL) avatar = member.guild.iconURL;
   if (member.user.avatarURL) avatar = member.user.avatarURL;
