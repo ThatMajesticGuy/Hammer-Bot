@@ -250,7 +250,7 @@ async function handleVideo(video, message, voiceChannel, playlist = false) {
 	return;
 }
 
-function play(guild, song) {
+async function play(guild, song) {
 	const serverQueue = queue.get(guild.id);
 
 	if (!song) {
