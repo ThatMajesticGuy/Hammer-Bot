@@ -115,7 +115,12 @@ bot.on("message", async message => {
 
 	if (command === `play`) {
 		const voiceChannel = message.member.voiceChannel;
-		if (!voiceChannel) return message.channel.send('I\'m sorry but you need to be in a voice channel to play music!');
+		const voiceChannel2 = message.member.voiceChannelID;
+		  if (message.channel.id !== "304339778021752833") return message.channel.send(":musical_note: :x: ***__You need to be in <#304339778021752833> To use this command!__*** :x: :musical_note:")
+  if (voiceChannel2 !== "304339570047188992" && !voiceChannel2) return message.channel.send(":musical_note: :x:***__You Must be in the music room to use this Command!__*** :x: :musical_note:")
+      if (message.channel.id !== "383693299908608010") return message.channel.send("You need to be in <#383693299908608010> To use this command!")
+
+
 		const permissions = voiceChannel.permissionsFor(message.bot.user);
 		if (!permissions.has('CONNECT')) {
 			return message.channel.send('I cannot connect to your voice channel, make sure I have the proper permissions!');
