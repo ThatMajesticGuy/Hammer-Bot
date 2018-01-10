@@ -316,7 +316,7 @@ if(song.durationh == 0 && song.durationm == 0 && song.durations !== 0) {
 } else {
   return serverQueue.textChannel.send(`🎶 Now playing: **${song.title}**`);
 }
-})};
+}};
 
 process.on('unhandledRejection', error => {
     console.log(`Unhandled Error Found! \n ${error.stack}`)
