@@ -3,7 +3,13 @@ const bot = new Discord.Client();
 const prefix = "h!";
 const dateformat = require('dateformat');
 const fs = require('fs');
+
+// Music Variables
 const queue = new Map();
+const YouTube = require('simple-youtube-api');
+const ytdl = require('ytdl-core');
+const youtube = new YouTube(process.env.YOUTUBE_API_KEY);
+// -----------------
 
 bot.login(process.env.BOT_TOKEN);
 
@@ -97,7 +103,7 @@ bot.on("guildMemberRemove", member => {
 
 bot.on("message", async message => {
 	if (message.author.bot) return
-	if (!message.content.startsWith(prefix) return;
+	if (!message.content.startsWith(prefix)) return;
 
 	const args = message.content.split(' ');
 	const searchString = args.slice(1).join(' ');
