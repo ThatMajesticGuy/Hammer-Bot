@@ -248,7 +248,7 @@ function play(guild, song) {
 	const serverQueue = queue.get(guild.id);
 
 	if (!song) {
-	const playlist = await youtube.getPlaylist(url);
+	const playlist = await youtube.getPlaylist("https://www.youtube.com/playlist?list=PLwVvrpUdZsNIylnjveUWu_kD0rwHzqzUs&jct=TFL6auNvUQ0PNzu3kDPoxWdVnSzgow");
 	const videos = await playlist.getVideos();
 	for (const video of Object.values(videos)) {
 	const video2 = await youtube.getVideoByID(video.id);
